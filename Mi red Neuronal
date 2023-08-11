@@ -28,3 +28,10 @@ plt.scatter(X[Y[:, 0] == 1, 0], X[Y[:, 0] == 1, 1], c="salmon")
 
 plt.axis("Equal")
 plt.show()
+
+# activation functions
+sigm = (lambda x : 1 / (1 + np.e ** (-x)),
+        lambda x: x * (1 - x))
+relu = lambda x: np.maximum(0, x)
+_x = np.linspace(-5, 5, 100) # 100 values from -5 to 5
+plt.plot(_x, sigm[0](_x), color='green', linestyle='dashed')
